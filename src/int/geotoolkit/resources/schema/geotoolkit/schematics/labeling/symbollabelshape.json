@@ -1,0 +1,45 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.schematics.labeling.SymbolLabelShape",
+  "description": "Schema describing Symbol Label Shape",
+  "title": "Symbol Label Shape Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/EmptyClass"},
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.schematics.labeling.SymbolLabelShape",
+              "id": "/geotoolkit.schematics.labeling.SymbolLabelShape/properties/ClassName"
+            }
+          ]
+        },
+        "labelshape": {
+          "type": "object",
+          "id": "/geotoolkit.schematics.labeling.SymbolLabelShape/properties/labelshape",
+          "properties": {
+            "linestyle": {
+              "id": "/geotoolkit.schematics.labeling.SymbolLabelShape/properties/labelshape/properties/linestyle",
+              "$ref": "/geotoolkit.attributes.LineStyle"
+            },
+            "fillstyle": {
+              "id": "/geotoolkit.schematics.labeling.SymbolLabelShape/properties/labelshape/properties/fillstyle",
+              "$ref": "/geotoolkit.attributes.FillStyle"
+            }
+          }
+        },
+        "size": {
+          "id": "/geotoolkit.schematics.labeling.SymbolLabelShape/properties/labelshape/properties/size",
+          "type": "integer"
+        },
+        "labeltextstyle": {
+          "id": "/geotoolkit.schematics.labeling.SymbolLabelShape/properties/labelshape/properties/labeltextstyle",
+          "$ref": "/geotoolkit.attributes.TextStyle"
+        }
+      }
+    }
+  ]
+}

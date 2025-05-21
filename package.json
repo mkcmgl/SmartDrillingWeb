@@ -1,0 +1,56 @@
+{
+  "name": "vue3-project",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --mode test",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build --force --noEmit"
+  },
+  "dependencies": {
+    "@amap/amap-jsapi-loader": "^1.0.1",
+    "@int/geotoolkit": "file:./src/int/int-geotoolkit-4.0.76.tgz",
+    "@int/geotoolkit3d": "file:./src/int/int-geotoolkit3d-4.0.76.tgz",
+    "@int/impl": "file:./src/int/int-impl-4.0.76.tgz",
+    "axios": "^1.7.7",
+    "dayjs": "^1.11.13",
+    "echarts": "^5.5.1",
+    "element-plus": "^2.8.6",
+    "golden-layout": "^2.6.0",
+    "html2canvas": "^1.4.1",
+    "jquery": "^3.7.1",
+    "lodash": "^4.17.21",
+    "mitt": "^3.0.1",
+    "moment": "^2.30.1",
+    "pinia": "^2.2.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "spark-md5": "^3.0.2",
+    "three": "0.152.0",
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5",
+    "vue3-project": "file:",
+    "websocket": "^1.0.35",
+    "x2js": "^3.4.4"
+  },
+  "overrides": {
+    "react": "18.2.0",
+    "react-native": "0.71.7",
+    "@shopify/react-native-skia": "0.1.212"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^20.17.0",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/tsconfig": "^0.5.1",
+    "npm-run-all2": "^7.0.1",
+    "sass": "^1.80.4",
+    "typescript": "~5.6.0",
+    "vite": "^5.4.10",
+    "vite-plugin-vue-setup-extend": "^0.4.0",
+    "vue-tsc": "^2.1.6"
+  }
+}

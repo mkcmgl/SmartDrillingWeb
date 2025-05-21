@@ -1,0 +1,615 @@
+{
+    "author": "support@int.com",
+    "bugs": {
+        "url": "https://jira.int.com/projects/HTML/issues"
+    },
+    "description": "GeoToolkit is a comprehensive set of high-performance 2D/3D tools and libraries.",
+    "homepage": "https://www.int.com",
+    "keywords": [
+        "geotoolkit"
+    ],
+    "license": "SEE LICENSE IN license.html",
+    "name": "@int/geotoolkit3d",
+    "private": true,
+    "sideEffects": [
+        "**/bootstrap/**"
+    ],
+    "version": "4.0.76",
+    "dependencies": {
+        "three": "0.152.0"
+    },
+    "devDependencies": {
+        "@types/three": "0.152.0"
+    },
+    "optionalDependencies": {
+        "@xmldom/xmldom": "^0.8.1",
+        "jsdom": "^19.0.0",
+        "canvas": "^2.11.0"
+    },
+    "peerDependencies": {
+        "@int/geotoolkit": "4.0.76",
+        "@int/impl": "4.0.76"
+    },
+    "exports": {
+        "./Constants": {
+            "default": "./Constants.js"
+        },
+        "./controller/AbstractController": {
+            "default": "./controller/AbstractController.js"
+        },
+        "./controller/EmptyController": {
+            "default": "./controller/EmptyController.js"
+        },
+        "./controller/FirstPersonController": {
+            "default": "./controller/FirstPersonController.js"
+        },
+        "./controller/OrbitController": {
+            "default": "./controller/OrbitController.js"
+        },
+        "./controller/RollController": {
+            "default": "./controller/RollController.js"
+        },
+        "./controller/TrackballController": {
+            "default": "./controller/TrackballController.js"
+        },
+        "./data/loader/AbstractLoader": {
+            "default": "./data/loader/AbstractLoader.js"
+        },
+        "./data/loader/GLTFLoader": {
+            "default": "./data/loader/GLTFLoader.js"
+        },
+        "./data/loader/glTFType": {
+            "default": "./data/loader/glTFType.js"
+        },
+        "./data/loader/surface/EarthVisionLoader": {
+            "default": "./data/loader/surface/EarthVisionLoader.js"
+        },
+        "./data/loader/vtk/VTKFactory": {
+            "default": "./data/loader/vtk/VTKFactory.js"
+        },
+        "./data/loader/vtk/VTKLoader": {
+            "default": "./data/loader/vtk/VTKLoader.js"
+        },
+        "./data/reservoir/AbstractReservoirData": {
+            "default": "./data/reservoir/AbstractReservoirData.js"
+        },
+        "./data/reservoir/hexahedral/ReservoirData": {
+            "default": "./data/reservoir/hexahedral/ReservoirData.js"
+        },
+        "./data/surface/AbstractSurfaceData": {
+            "default": "./data/surface/AbstractSurfaceData.js"
+        },
+        "./data/surface/ContourLineData": {
+            "default": "./data/surface/ContourLineData.js"
+        },
+        "./data/surface/GridSurfaceData": {
+            "default": "./data/surface/GridSurfaceData.js"
+        },
+        "./data/surface/HeightMapSurfaceData": {
+            "default": "./data/surface/HeightMapSurfaceData.js"
+        },
+        "./data/surface/PillarSurfaceData": {
+            "default": "./data/surface/PillarSurfaceData.js"
+        },
+        "./data/surface/SurfaceData": {
+            "default": "./data/surface/SurfaceData.js"
+        },
+        "./data/surface/TrimeshSurfaceData": {
+            "default": "./data/surface/TrimeshSurfaceData.js"
+        },
+        "./data/util/Octree": {
+            "default": "./data/util/Octree.js"
+        },
+        "./data/well/MultiLateralPipeData": {
+            "default": "./data/well/MultiLateralPipeData.js"
+        },
+        "./data/well/MultiLateralWellData": {
+            "default": "./data/well/MultiLateralWellData.js"
+        },
+        "./Event": {
+            "default": "./Event.js"
+        },
+        "./geodata/Trajectory3d": {
+            "default": "./geodata/Trajectory3d.js"
+        },
+        "./geodata/TrajectoryValue": {
+            "default": "./geodata/TrajectoryValue.js"
+        },
+        "./picking/AbstractPicking": {
+            "default": "./picking/AbstractPicking.js"
+        },
+        "./picking/pickingrenderer/AbstractShaderPickingMaterial": {
+            "default": "./picking/pickingrenderer/AbstractShaderPickingMaterial.js"
+        },
+        "./picking/pickingrenderer/BasicPickingMaterial": {
+            "default": "./picking/pickingrenderer/BasicPickingMaterial.js"
+        },
+        "./picking/pickingrenderer/DefaultLinePickingMaterial": {
+            "default": "./picking/pickingrenderer/DefaultLinePickingMaterial.js"
+        },
+        "./picking/pickingrenderer/DefaultMeshPickingMaterial": {
+            "default": "./picking/pickingrenderer/DefaultMeshPickingMaterial.js"
+        },
+        "./picking/pickingrenderer/DefaultPointCloudPickingMaterial": {
+            "default": "./picking/pickingrenderer/DefaultPointCloudPickingMaterial.js"
+        },
+        "./picking/pickingrenderer/DefaultPointSetPickingMaterial": {
+            "default": "./picking/pickingrenderer/DefaultPointSetPickingMaterial.js"
+        },
+        "./picking/pickingrenderer/DefaultReservoirPickingMaterial": {
+            "default": "./picking/pickingrenderer/DefaultReservoirPickingMaterial.js"
+        },
+        "./picking/pickingrenderer/DefaultSeismicSlicePickingMaterial": {
+            "default": "./picking/pickingrenderer/DefaultSeismicSlicePickingMaterial.js"
+        },
+        "./picking/pickingrenderer/DefaultShaderPickingMaterial": {
+            "default": "./picking/pickingrenderer/DefaultShaderPickingMaterial.js"
+        },
+        "./picking/pickingrenderer/DefaultSpritePickingMaterial": {
+            "default": "./picking/pickingrenderer/DefaultSpritePickingMaterial.js"
+        },
+        "./picking/pickingrenderer/PointsPickingResult": {
+            "default": "./picking/pickingrenderer/PointsPickingResult.js"
+        },
+        "./picking/RayCastPicking": {
+            "default": "./picking/RayCastPicking.js"
+        },
+        "./picking/RendererMultiPicking": {
+            "default": "./picking/RendererMultiPicking.js"
+        },
+        "./picking/RendererPicking": {
+            "default": "./picking/RendererPicking.js"
+        },
+        "./Plot": {
+            "default": "./Plot.js"
+        },
+        "./postprocessing/AbstractHighlightPass": {
+            "default": "./postprocessing/AbstractHighlightPass.js"
+        },
+        "./postprocessing/AbstractPass": {
+            "default": "./postprocessing/AbstractPass.js"
+        },
+        "./postprocessing/DepthPeelingPass": {
+            "default": "./postprocessing/DepthPeelingPass.js"
+        },
+        "./postprocessing/FullScreenQuad": {
+            "default": "./postprocessing/FullScreenQuad.js"
+        },
+        "./postprocessing/FXAARenderPass": {
+            "default": "./postprocessing/FXAARenderPass.js"
+        },
+        "./postprocessing/HighlightPass": {
+            "default": "./postprocessing/HighlightPass.js"
+        },
+        "./postprocessing/OutlinePass": {
+            "default": "./postprocessing/OutlinePass.js"
+        },
+        "./postprocessing/ShaderPass": {
+            "default": "./postprocessing/ShaderPass.js"
+        },
+        "./postprocessing/SSAARenderPass": {
+            "default": "./postprocessing/SSAARenderPass.js"
+        },
+        "./scene/animation/AbstractAnimation": {
+            "default": "./scene/animation/AbstractAnimation.js"
+        },
+        "./scene/animation/Animation": {
+            "default": "./scene/animation/Animation.js"
+        },
+        "./scene/animation/AnimationManager": {
+            "default": "./scene/animation/AnimationManager.js"
+        },
+        "./scene/animation/CameraMoveAnimation": {
+            "default": "./scene/animation/CameraMoveAnimation.js"
+        },
+        "./scene/AnnotationBase": {
+            "default": "./scene/AnnotationBase.js"
+        },
+        "./scene/ColorMapShaderMaterial": {
+            "default": "./scene/ColorMapShaderMaterial.js"
+        },
+        "./scene/compass/Compass": {
+            "default": "./scene/compass/Compass.js"
+        },
+        "./scene/compass/CompassArrow": {
+            "default": "./scene/compass/CompassArrow.js"
+        },
+        "./scene/compass/CompassAxis": {
+            "default": "./scene/compass/CompassAxis.js"
+        },
+        "./scene/curtain/CurtainVerticalMode": {
+            "default": "./scene/curtain/CurtainVerticalMode.js"
+        },
+        "./scene/curtain/PlaneCurtain": {
+            "default": "./scene/curtain/PlaneCurtain.js"
+        },
+        "./scene/ellipse/EllipseGeometry": {
+            "default": "./scene/ellipse/EllipseGeometry.js"
+        },
+        "./scene/ellipse/FilledEllipseGeometry": {
+            "default": "./scene/ellipse/FilledEllipseGeometry.js"
+        },
+        "./scene/grid/Grid": {
+            "default": "./scene/grid/Grid.js"
+        },
+        "./scene/grid/legend/GridLegend": {
+            "default": "./scene/grid/legend/GridLegend.js"
+        },
+        "./scene/grid/legend/PlaneLegendContainer": {
+            "default": "./scene/grid/legend/PlaneLegendContainer.js"
+        },
+        "./scene/grid/PolarGrid": {
+            "default": "./scene/grid/PolarGrid.js"
+        },
+        "./scene/label/Label": {
+            "default": "./scene/label/Label.js"
+        },
+        "./scene/label/LabelGeometry": {
+            "default": "./scene/label/LabelGeometry.js"
+        },
+        "./scene/label/LabelMaterial": {
+            "default": "./scene/label/LabelMaterial.js"
+        },
+        "./scene/label/VerticalAnchorPosition": {
+            "default": "./scene/label/VerticalAnchorPosition.js"
+        },
+        "./scene/LineSegments": {
+            "default": "./scene/LineSegments.js"
+        },
+        "./scene/map/TiledMap": {
+            "default": "./scene/map/TiledMap.js"
+        },
+        "./scene/MeshColorMapBasicMaterial": {
+            "default": "./scene/MeshColorMapBasicMaterial.js"
+        },
+        "./scene/MeshColorMapLambertMaterial": {
+            "default": "./scene/MeshColorMapLambertMaterial.js"
+        },
+        "./scene/Object3D": {
+            "default": "./scene/Object3D.js"
+        },
+        "./scene/ObjectWithMaterial": {
+            "default": "./scene/ObjectWithMaterial.js"
+        },
+        "./scene/plane/Plane": {
+            "default": "./scene/plane/Plane.js"
+        },
+        "./scene/plane/PlaneMaterial": {
+            "default": "./scene/plane/PlaneMaterial.js"
+        },
+        "./scene/pointset/PointCloud": {
+            "default": "./scene/pointset/PointCloud.js"
+        },
+        "./scene/pointset/PointSet": {
+            "default": "./scene/pointset/PointSet.js"
+        },
+        "./scene/pointset/PointsetMaterial": {
+            "default": "./scene/pointset/PointsetMaterial.js"
+        },
+        "./scene/reservoir/AbstractReservoirGrid": {
+            "default": "./scene/reservoir/AbstractReservoirGrid.js"
+        },
+        "./scene/reservoir/DisplayMode": {
+            "default": "./scene/reservoir/DisplayMode.js"
+        },
+        "./scene/reservoir/EventDispatcher": {
+            "default": "./scene/reservoir/EventDispatcher.js"
+        },
+        "./scene/reservoir/hexahedral/ReservoirGrid": {
+            "default": "./scene/reservoir/hexahedral/ReservoirGrid.js"
+        },
+        "./scene/reservoir/HighlightMode": {
+            "default": "./scene/reservoir/HighlightMode.js"
+        },
+        "./scene/reservoir/IJKIndex": {
+            "default": "./scene/reservoir/IJKIndex.js"
+        },
+        "./scene/reservoir/IJKValueFilter": {
+            "default": "./scene/reservoir/IJKValueFilter.js"
+        },
+        "./scene/reservoir/SkeletonOptions": {
+            "default": "./scene/reservoir/SkeletonOptions.js"
+        },
+        "./scene/schematics/SchematicsNode": {
+            "default": "./scene/schematics/SchematicsNode.js"
+        },
+        "./scene/seismic/Fence": {
+            "default": "./scene/seismic/Fence.js"
+        },
+        "./scene/seismic/FenceMaterial": {
+            "default": "./scene/seismic/FenceMaterial.js"
+        },
+        "./scene/seismic/FencePanel": {
+            "default": "./scene/seismic/FencePanel.js"
+        },
+        "./scene/seismic/Horizon": {
+            "default": "./scene/seismic/Horizon.js"
+        },
+        "./scene/seismic/IndexGrid": {
+            "default": "./scene/seismic/IndexGrid.js"
+        },
+        "./scene/seismic/ITiledSurface": {
+            "default": "./scene/seismic/ITiledSurface.js"
+        },
+        "./scene/seismic/Slice": {
+            "default": "./scene/seismic/Slice.js"
+        },
+        "./scene/seismic/SliceMaterial": {
+            "default": "./scene/seismic/SliceMaterial.js"
+        },
+        "./scene/seismic/Volume": {
+            "default": "./scene/seismic/Volume.js"
+        },
+        "./scene/surface/AbstractSurface": {
+            "default": "./scene/surface/AbstractSurface.js"
+        },
+        "./scene/surface/contour/Contour": {
+            "default": "./scene/surface/contour/Contour.js"
+        },
+        "./scene/surface/contour/ContourLabel": {
+            "default": "./scene/surface/contour/ContourLabel.js"
+        },
+        "./scene/surface/contour/MajorMinorStrategy": {
+            "default": "./scene/surface/contour/MajorMinorStrategy.js"
+        },
+        "./scene/surface/contour/Ray": {
+            "default": "./scene/surface/contour/Ray.js"
+        },
+        "./scene/surface/contour/Triangle": {
+            "default": "./scene/surface/contour/Triangle.js"
+        },
+        "./scene/surface/fault/Fault": {
+            "default": "./scene/surface/fault/Fault.js"
+        },
+        "./scene/surface/Surface": {
+            "default": "./scene/surface/Surface.js"
+        },
+        "./scene/Text2d": {
+            "default": "./scene/Text2d.js"
+        },
+        "./scene/well/CylinderLog": {
+            "default": "./scene/well/CylinderLog.js"
+        },
+        "./scene/well/DynamicTube": {
+            "default": "./scene/well/DynamicTube.js"
+        },
+        "./scene/well/LineGeometry": {
+            "default": "./scene/well/LineGeometry.js"
+        },
+        "./scene/well/logarray/LogArray": {
+            "default": "./scene/well/logarray/LogArray.js"
+        },
+        "./scene/well/logarray2d/LogArray2D": {
+            "default": "./scene/well/logarray2d/LogArray2D.js"
+        },
+        "./scene/well/LogCurve2D": {
+            "default": "./scene/well/LogCurve2D.js"
+        },
+        "./scene/well/LogFill2D": {
+            "default": "./scene/well/LogFill2D.js"
+        },
+        "./scene/well/loggrid/GridAlignment": {
+            "default": "./scene/well/loggrid/GridAlignment.js"
+        },
+        "./scene/well/loggrid/LogGrid2D": {
+            "default": "./scene/well/loggrid/LogGrid2D.js"
+        },
+        "./scene/well/Pipe": {
+            "default": "./scene/well/Pipe.js"
+        },
+        "./scene/well/schematic/Cone": {
+            "default": "./scene/well/schematic/Cone.js"
+        },
+        "./scene/well/schematic/Cube": {
+            "default": "./scene/well/schematic/Cube.js"
+        },
+        "./scene/well/schematic/Cylinder": {
+            "default": "./scene/well/schematic/Cylinder.js"
+        },
+        "./scene/well/schematic/Parallelepiped": {
+            "default": "./scene/well/schematic/Parallelepiped.js"
+        },
+        "./scene/well/schematic/SchematicBase": {
+            "default": "./scene/well/schematic/SchematicBase.js"
+        },
+        "./scene/well/schematic/Sphere": {
+            "default": "./scene/well/schematic/Sphere.js"
+        },
+        "./scene/well/top/Ellipse": {
+            "default": "./scene/well/top/Ellipse.js"
+        },
+        "./scene/well/top/Sphere": {
+            "default": "./scene/well/top/Sphere.js"
+        },
+        "./scene/well/top/TopSymbol": {
+            "default": "./scene/well/top/TopSymbol.js"
+        },
+        "./scene/well/TrajectoryLine": {
+            "default": "./scene/well/TrajectoryLine.js"
+        },
+        "./scene/well/TrajectoryTube": {
+            "default": "./scene/well/TrajectoryTube.js"
+        },
+        "./scene/well/TubeGeometry": {
+            "default": "./scene/well/TubeGeometry.js"
+        },
+        "./scene/well/Vector": {
+            "default": "./scene/well/Vector.js"
+        },
+        "./schematics/factory/SimpleFactory": {
+            "default": "./schematics/factory/SimpleFactory.js"
+        },
+        "./schematics/factory/Trajectory": {
+            "default": "./schematics/factory/Trajectory.js"
+        },
+        "./schematics/layout/AbstractAnnotationLayout": {
+            "default": "./schematics/layout/AbstractAnnotationLayout.js"
+        },
+        "./schematics/layout/DefaultAnnotationLayout": {
+            "default": "./schematics/layout/DefaultAnnotationLayout.js"
+        },
+        "./schematics/layout/ExpandedAnnotationLayout": {
+            "default": "./schematics/layout/ExpandedAnnotationLayout.js"
+        },
+        "./selection/from": {
+            "default": "./selection/from.js"
+        },
+        "./THREE": {
+            "default": "./THREE.js"
+        },
+        "./tool/AbstractGestureTool": {
+            "default": "./tool/AbstractGestureTool.js"
+        },
+        "./tool/AbstractMoveTool": {
+            "default": "./tool/AbstractMoveTool.js"
+        },
+        "./tool/AbstractTool": {
+            "default": "./tool/AbstractTool.js"
+        },
+        "./tool/cursor/AbstractCursor": {
+            "default": "./tool/cursor/AbstractCursor.js"
+        },
+        "./tool/cursor/CompositeCursor": {
+            "default": "./tool/cursor/CompositeCursor.js"
+        },
+        "./tool/cursor/CrossCursor": {
+            "default": "./tool/cursor/CrossCursor.js"
+        },
+        "./tool/cursor/CrossHair2DCursor": {
+            "default": "./tool/cursor/CrossHair2DCursor.js"
+        },
+        "./tool/cursor/CrossHairCursor": {
+            "default": "./tool/cursor/CrossHairCursor.js"
+        },
+        "./tool/cursor/CursorTool": {
+            "default": "./tool/cursor/CursorTool.js"
+        },
+        "./tool/devicesupport/AbstractDeviceSupport": {
+            "default": "./tool/devicesupport/AbstractDeviceSupport.js"
+        },
+        "./tool/devicesupport/DeviceSupportRegistry": {
+            "default": "./tool/devicesupport/DeviceSupportRegistry.js"
+        },
+        "./tool/Events": {
+            "default": "./tool/Events.js"
+        },
+        "./tool/Highlighter": {
+            "default": "./tool/Highlighter.js"
+        },
+        "./tool/MeasuringTool": {
+            "default": "./tool/MeasuringTool.js"
+        },
+        "./tool/MeshNormalsHelper": {
+            "default": "./tool/MeshNormalsHelper.js"
+        },
+        "./tool/PlanarMoveTool": {
+            "default": "./tool/PlanarMoveTool.js"
+        },
+        "./tool/seismic/SeismicSliderTool": {
+            "default": "./tool/seismic/SeismicSliderTool.js"
+        },
+        "./tool/SelectionTool": {
+            "default": "./tool/SelectionTool.js"
+        },
+        "./tool/SliderMoveTool": {
+            "default": "./tool/SliderMoveTool.js"
+        },
+        "./tool/ToolTip": {
+            "default": "./tool/ToolTip.js"
+        },
+        "./transformation/IndexCoordinates": {
+            "default": "./transformation/IndexCoordinates.js"
+        },
+        "./transformation/XYCoordinates": {
+            "default": "./transformation/XYCoordinates.js"
+        },
+        "./util/Attributes": {
+            "default": "./util/Attributes.js"
+        },
+        "./util/Helper": {
+            "default": "./util/Helper.js"
+        },
+        "./util/interpolators/AbstractInterpolator": {
+            "default": "./util/interpolators/AbstractInterpolator.js"
+        },
+        "./util/interpolators/InverseDistanceWeighting": {
+            "default": "./util/interpolators/InverseDistanceWeighting.js"
+        },
+        "./util/intersection/AbstractIntersection": {
+            "default": "./util/intersection/AbstractIntersection.js"
+        },
+        "./util/intersection/AbstractSeismicIntersection": {
+            "default": "./util/intersection/AbstractSeismicIntersection.js"
+        },
+        "./util/intersection/FenceIntersection": {
+            "default": "./util/intersection/FenceIntersection.js"
+        },
+        "./util/intersection/IntersectionManager": {
+            "default": "./util/intersection/IntersectionManager.js"
+        },
+        "./util/intersection/PlaneIntersection": {
+            "default": "./util/intersection/PlaneIntersection.js"
+        },
+        "./util/intersection/SeismicIntersection": {
+            "default": "./util/intersection/SeismicIntersection.js"
+        },
+        "./util/Math3DUtil": {
+            "default": "./util/Math3DUtil.js"
+        },
+        "./util/MeshUtils": {
+            "default": "./util/MeshUtils.js"
+        },
+        "./util/ObjectProcessor": {
+            "default": "./util/ObjectProcessor.js"
+        },
+        "./util/occlusion/AbstractOcclusionManager": {
+            "default": "./util/occlusion/AbstractOcclusionManager.js"
+        },
+        "./util/OrientedBoundingBox": {
+            "default": "./util/OrientedBoundingBox.js"
+        },
+        "./util/Shaders": {
+            "default": "./util/Shaders.js"
+        },
+        "./util/shaders/FlatShading": {
+            "default": "./util/shaders/FlatShading.js"
+        },
+        "./util/shaders/LabelShaders": {
+            "default": "./util/shaders/LabelShaders.js"
+        },
+        "./util/surface/BasicTriangulator": {
+            "default": "./util/surface/BasicTriangulator.js"
+        },
+        "./util/Texture": {
+            "default": "./util/Texture.js"
+        },
+        "./util/well/CylinderLog": {
+            "default": "./util/well/CylinderLog.js"
+        },
+        "./util/well/Deviation": {
+            "default": "./util/well/Deviation.js"
+        },
+        "./util/well/Direction": {
+            "default": "./util/well/Direction.js"
+        },
+        "./util/well/logarray/LogArrayUtil": {
+            "default": "./util/well/logarray/LogArrayUtil.js"
+        },
+        "./util/well/Well": {
+            "default": "./util/well/Well.js"
+        },
+        "./widgets/AbstractWidget": {
+            "default": "./widgets/AbstractWidget.js"
+        },
+        "./widgets/ProjectionWidget": {
+            "default": "./widgets/ProjectionWidget.js"
+        },
+        "./widgets/scatter/ScatterPlot": {
+            "default": "./widgets/scatter/ScatterPlot.js"
+        },
+        "./widgets/scatter/Symbols": {
+            "default": "./widgets/scatter/Symbols.js"
+        }
+    },
+    "type": "module"
+}

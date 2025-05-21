@@ -1,0 +1,196 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.charts.BarChart",
+  "description": "Schema describing Carnac Bar Chart",
+  "title": "Bar Chart Schema",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/geotoolkit.charts.AbstractChart"
+    },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {
+              "#ref": "/ClassName"
+            },
+            {
+              "default": "geotoolkit.charts.BarChart",
+              "id": "/geotoolkit.charts.BarChart/properties/ClassName"
+            }
+          ]
+        },
+        "series": {
+          "type": "object",
+          "id": "/geotoolkit.charts.BarChart/properties/series",
+          "properties": {
+            "x": {
+              "id": "/geotoolkit.charts.BarChart/properties/series/properties/x",
+              "type": "object",
+              "properties": {
+                "data": {
+                  "title": "X series",
+                  "type": "string"
+                },
+                "name": {
+                  "title": "Name",
+                  "type": "string"
+                }
+              }
+            },
+            "y": {
+              "id": "/geotoolkit.charts.BarChart/properties/series/properties/y",
+              "title": "Y series",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "id": "/geotoolkit.charts.BarChart/properties/series/properties/y/properties/data",
+                    "type": "string"
+                  },
+                  "linestyle": {
+                    "id": "/geotoolkit.charts.BarChart/properties/series/properties/y/properties/linestyle",
+                    "$ref": "/geotoolkit.attributes.LineStyle"
+                  },
+                  "fillstyle": {
+                    "id": "/geotoolkit.charts.BarChart/properties/series/properties/y/properties/fillstyle",
+                    "$ref": "/geotoolkit.attributes.FillStyle"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "stacked": {
+          "id": "/geotoolkit.charts.BarChart/properties/stacked",
+          "type": "boolean"
+        },
+        "datamode": {
+          "id": "/geotoolkit.charts.BarChart/properties/datamode",
+          "type": "string",
+          "enum": [
+            "Associative",
+            "Single"
+          ]
+        },
+        "calculated": {
+          "description": "Placeholder for calculated properties",
+          "id": "/geotoolkit.charts.BarChart/properties/calculated",
+          "type": "object"
+        },
+        "referenceline": {
+          "id": "/geotoolkit.charts.BarChart/properties/referenceline",
+          "type": "object",
+          "properties": {
+            "value": {
+              "id": "/geotoolkit.charts.BarChart/properties/referenceline/properties/value",
+              "type": "number"
+            },
+            "linedecoration": {
+              "id": "/geotoolkit.charts.BarChart/properties/referenceline/properties/linedecoration",
+              "type": "string",
+              "enum": [
+                "solid",
+                "wavy",
+                "double",
+                "double-wavy"
+              ]
+            }
+          }
+        },
+        "barmaxwidth": {
+          "id": "/geotoolkit.charts.BarChart/properties/barmaxwidth",
+          "type": "number"
+        },
+        "barpad": {
+          "id": "/geotoolkit.charts.BarChart/properties/barpad",
+          "type": "number"
+        },
+        "symbol": {
+          "id": "/geotoolkit.charts.BarChart/properties/symbol",
+          "type": "object",
+          "properties": {
+            "visible": {
+              "id": "/geotoolkit.charts.BarChart/properties/symbol/properties/visible",
+              "type": "boolean"
+            }
+          }
+        },
+        "barvalues": {
+          "id": "/geotoolkit.charts.BarChart/properties/barvalues",
+          "type": "object",
+          "properties": {
+            "visible": {
+              "id": "/geotoolkit.charts.BarChart/properties/barvalues/properties/visible",
+              "type": "boolean"
+            },
+            "totalonly": {
+              "id": "/geotoolkit.charts.BarChart/properties/barvalues/properties/totalonly",
+              "type": "boolean"
+            },
+            "rotationangle": {
+              "id": "/geotoolkit.charts.BarChart/properties/barvalues/properties/rotationangle",
+              "type": "number"
+            },
+            "decimalprecision": {
+              "id": "/geotoolkit.charts.BarChart/properties/barvalues/properties/decimalprecision",
+              "type": "number"
+            },
+            "textstyle": {
+              "id": "/geotoolkit.charts.BarChart/properties/barvalues/properties/textstyle",
+              "$ref": "/geotoolkit.attributes.TextStyle"
+            },
+            "alignment": {
+              "id": "/geotoolkit.charts.BarChart/properties/barvalues/properties/alignment",
+              "type": "string",
+              "enum": [
+                "None",
+                "LeftTop",
+                "LeftBottom",
+                "RightTop",
+                "RightBottom",
+                "Center",
+                "LeftCenter",
+                "BottomCenter",
+                "RightCenter",
+                "TopCenter"
+              ]
+            },
+            "position": {
+              "id": "/geotoolkit.charts.BarChart/properties/barvalues/properties/position",
+              "type": "string",
+              "enum": [
+                "None",
+                "LeftTop",
+                "LeftBottom",
+                "RightTop",
+                "RightBottom",
+                "Center",
+                "LeftCenter",
+                "BottomCenter",
+                "RightCenter",
+                "TopCenter"
+              ]
+            },
+            "offset": {
+              "id": "/geotoolkit.charts.BarChart/properties/barvalues/properties/offset",
+              "type": "object",
+              "properties": {
+                "x": {
+                  "id": "/geotoolkit.charts.BarChart/properties/barvalues/properties/offset/properties/x",
+                  "type": "number"
+                },
+                "y": {
+                  "id": "/geotoolkit.charts.BarChart/properties/barvalues/properties/offset/properties/y",
+                  "type": "number"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

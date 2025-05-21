@@ -1,0 +1,144 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.charts.LineChart",
+  "description": "Schema describing Carnac Line Chart",
+  "title": "Line Chart Schema",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/geotoolkit.charts.AbstractChart"
+    },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {
+              "#ref": "/ClassName"
+            },
+            {
+              "default": "geotoolkit.charts.LineChart",
+              "id": "/geotoolkit.charts.LineChart/properties/ClassName"
+            }
+          ]
+        },
+        "series": {
+          "type": "object",
+          "id": "/geotoolkit.charts.LineChart/properties/series",
+          "properties": {
+            "x": {
+              "id": "/geotoolkit.charts.LineChart/properties/series/properties/x",
+              "type": "object",
+              "properties": {
+                "data": {
+                  "title": "X series",
+                  "type": "string"
+                },
+                "name": {
+                  "title": "Name",
+                  "type": "string"
+                }
+              }
+            },
+            "y": {
+              "id": "/geotoolkit.charts.LineChart/properties/series/properties/y",
+              "title": "Y series",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "id": "/geotoolkit.charts.LineChart/properties/series/properties/y/properties/data",
+                    "type": "string"
+                  },
+                  "linestyle": {
+                    "id": "/geotoolkit.charts.LineChart/properties/series/properties/y/properties/linestyle",
+                    "$ref": "/geotoolkit.attributes.LineStyle"
+                  },
+                  "symbol": {
+                    "type": "object",
+                    "properties": {
+                      "linestyle": {
+                        "id": "/geotoolkit.charts.LineChart/properties/series/properties/y/properties/symbol/properties/linestyle",
+                        "$ref": "/geotoolkit.attributes.LineStyle"
+                      },
+                      "fillstyle": {
+                        "id": "/geotoolkit.charts.LineChart/properties/series/properties/y/properties/symbol/properties/fillstyle",
+                        "$ref": "/geotoolkit.attributes.FillStyle"
+                      },
+                      "painter": {
+                        "id": "/geotoolkit.charts.LineChart/properties/series/properties/y/properties/symbol/properties/painter",
+                        "type": "string"
+                      } ,
+                        "visible": {
+                        "id": "/geotoolkit.charts.LineChart/properties/series/properties/y/properties/symbol/properties/visible",
+                        "type": "boolean"
+                      }
+                    }
+                  },
+                  "selectionsymbol": {
+                    "type": "object",
+                    "properties": {
+                      "linestyle": {
+                        "id": "/geotoolkit.charts.LineChart/properties/series/properties/y/properties/symbol/properties/linestyle",
+                        "$ref": "/geotoolkit.attributes.LineStyle"
+                      },
+                      "fillstyle": {
+                        "id": "/geotoolkit.charts.LineChart/properties/series/properties/y/properties/symbol/properties/fillstyle",
+                        "$ref": "/geotoolkit.attributes.FillStyle"
+                      },
+                      "painter": {
+                        "id": "/geotoolkit.charts.LineChart/properties/series/properties/y/properties/symbol/properties/painter",
+                        "type": "string"
+                      } ,
+                        "visible": {
+                        "id": "/geotoolkit.charts.LineChart/properties/series/properties/y/properties/symbol/properties/visible",
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "spline": {
+          "id": "/geotoolkit.charts.LineChart/properties/spline",
+          "type": "boolean"
+        },
+        "symbol": {
+          "id": "/geotoolkit.charts.LineChart/properties/symbol",
+          "type": "object",
+          "properties": {
+            "width": {
+              "id": "/geotoolkit.charts.LineChart/properties/symbol/properties/width",
+              "type": "number"
+            },
+            "height": {
+              "id": "/geotoolkit.charts.LineChart/properties/symbol/properties/height",
+              "type": "number"
+            }
+          }
+        },
+        "selectionsymbol": {
+          "id": "/geotoolkit.charts.LineChart/properties/symbol",
+          "type": "object",
+          "properties": {
+            "width": {
+              "id": "/geotoolkit.charts.LineChart/properties/symbol/properties/width",
+              "type": "number"
+            },
+            "height": {
+              "id": "/geotoolkit.charts.LineChart/properties/symbol/properties/height",
+              "type": "number"
+            }
+          }
+        },
+        "calculated": {
+          "description": "Placeholder for calculated properties",
+          "id": "/geotoolkit.charts.LineChart/properties/calculated",
+          "type": "object"
+        }
+      }
+    }
+  ]
+}

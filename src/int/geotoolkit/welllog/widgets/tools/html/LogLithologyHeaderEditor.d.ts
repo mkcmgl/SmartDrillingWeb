@@ -1,0 +1,36 @@
+import { Editor } from '@int/geotoolkit/controls/tools/html/Editor';
+import type { LogLithologyHeader } from '@int/geotoolkit/welllog/header/LogLithologyHeader';
+import type { Point } from '@int/geotoolkit/util/Point';
+import type { Plot } from '@int/geotoolkit/plot/Plot';
+/**
+ * Helper class to initialize LogLithologyHeader inline-text editor on specific plot point
+ * @see {@link @int/geotoolkit/controls/tools/html/Editor~Editor}
+ */
+export declare class LogLithologyHeaderEditor {
+    /**
+     * Helper method to initialize geometry options for Inline Editor tool
+     * @see {@link @int/geotoolkit/controls/tools/html/Editor~Editor}
+     * @param logLithologyHeader log lithology header
+     * @param plotPoint plot point
+     */
+    static getTextLabelGeometry(logLithologyHeader: LogLithologyHeader, plotPoint: Point): LogLithologyHeaderEditor.EditOptions;
+    /**
+     * Helper method to initialize LogLithologyHeader inline-text editor on specific plot point
+     * @see {@link @int/geotoolkit/controls/tools/html/Editor~Editor}
+     * @param logLithologyHeader log lithology header
+     * @param plot plot to place inline-text editor
+     * @param plotPoint plot point
+     */
+    static editVisual(logLithologyHeader: LogLithologyHeader, plot: Plot, plotPoint: Point): Editor | null;
+}
+export declare namespace LogLithologyHeaderEditor {
+    /**
+     * Geometry and style options for text editor element
+     */
+    type EditOptions = Editor.EditOptions & {
+        /**
+         * Section index
+         */
+        index: number;
+    };
+}

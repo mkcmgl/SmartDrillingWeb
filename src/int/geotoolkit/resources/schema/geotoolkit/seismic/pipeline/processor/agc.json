@@ -1,0 +1,69 @@
+{
+  "additionalProperties": true,
+  "description": "Schema describing geotoolkit AGC Trace Processor",
+  "id": "/geotoolkit.seismic.pipeline.processor.AGC",
+  "title": "AGC Trace Processor Root Schema",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/geotoolkit.seismic.pipeline.processor.SeismicTraceProcessor"
+    },
+    {
+      "ClassName": {
+        "allOf": [
+          {
+            "#ref": "/ClassName"
+          },
+          {
+            "default": "geotoolkit.seismic.pipeline.processor.AGC",
+            "id": "/geotoolkit.seismic.pipeline.processor.AGC/properties/ClassName"
+          }
+        ]
+      },
+      "properties": {
+        "desiredaverage": {
+          "id": "/geotoolkit.seismic.pipeline.processor.AGC/properties/desiredaverage",
+          "type": "integer"
+        },
+        "units": {
+          "id": "/geotoolkit.seismic.pipeline.processor.AGC/properties/units",
+          "type": "string"
+        },
+        "windowlength": {
+          "id": "/geotoolkit.seismic.pipeline.processor.AGC/properties/windowlength",
+          "type": "integer"
+        },
+        "agclength": {
+          "id": "/geotoolkit.seismic.pipeline.processor.AGC/properties/agclength",
+          "type": "integer"
+        },
+        "startsample": {
+          "id": "/geotoolkit.seismic.pipeline.processor.AGC/properties/startsample",
+          "type": "integer"
+        },
+        "step": {
+          "id": "/geotoolkit.seismic.pipeline.processor.AGC/properties/step",
+          "type": "integer"
+        },
+        "noisereductionpercentage": {
+          "id": "/geotoolkit.seismic.pipeline.processor.AGC/properties/noisereductionpercentage",
+          "type": "integer"
+        },
+        "noisereduction": {
+          "id": "/geotoolkit.seismic.pipeline.processor.AGC/properties/noisereduction",
+          "type": "string"
+        }
+      },
+      "required": [
+        "desiredaverage",
+        "units",
+        "windowlength",
+        "agclength",
+        "startsample",
+        "step",
+        "noisereductionpercentage",
+        "noisereduction"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.controls.shapes.ColorBar",
+    "description": "Schema describing ColorBar",
+    "title": "ColorBar Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.scene.Group"},
+        {
+            "properties": {
+                "ClassName": {
+                    "allOf": [
+                        {"#ref": "/ClassName"},
+                        {
+                            "default": "geotoolkit.controls.shapes.ColorBar",
+                            "id": "/geotoolkit.controls.shapes.ColorBar/properties/ClassName"
+                        }
+                    ]
+                },
+                "colorprovider": {"$ref": "/geotoolkit.util.DefaultColorProvider"},
+                "min": {
+                    "id":"/geotoolkit.controls.shapes.ColorBar/properties/min",
+                    "type": "number"
+                },
+                "max": {
+                    "id":"/geotoolkit.controls.shapes.ColorBar/properties/max",
+                    "type": "number"
+                }
+            }
+        }
+    ]
+}

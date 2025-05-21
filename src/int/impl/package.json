@@ -1,0 +1,115 @@
+{
+    "author": "support@int.com",
+    "bugs": {
+        "url": "https://jira.int.com/projects/HTML/issues"
+    },
+    "bundleDependencies": [],
+    "type": "module",
+    "deprecated": false,
+    "description": "GeoToolkit is a comprehensive set of high-performance 2D/3D tools and libraries.",
+    "homepage": "https://www.int.com",
+    "keywords": [
+        "geotoolkit"
+    ],
+    "license": "SEE LICENSE IN license.html",
+    "name": "@int/impl",
+    "exports": {
+        "./geotoolkit.base.js": {
+            "default": "./geotoolkit.base.js"
+        },
+        "./geotoolkit.cgm.js": {
+            "default": "./geotoolkit.cgm.js"
+        },
+        "./geotoolkit.charts.js": {
+            "default": "./geotoolkit.charts.js"
+        },
+        "./geotoolkit.contour.js": {
+            "default": "./geotoolkit.contour.js"
+        },
+        "./geotoolkit.controls.js": {
+            "default": "./geotoolkit.controls.js"
+        },
+        "./geotoolkit.data.js": {
+            "default": "./geotoolkit.data.js"
+        },
+        "./geotoolkit.deviation.js": {
+            "default": "./geotoolkit.deviation.js"
+        },
+        "./geotoolkit.flowcharts.js": {
+            "default": "./geotoolkit.flowcharts.js"
+        },
+        "./geotoolkit.gauges.js": {
+            "default": "./geotoolkit.gauges.js"
+        },
+        "./geotoolkit.gridding.js": {
+            "default": "./geotoolkit.gridding.js"
+        },
+        "./geotoolkit.http.js": {
+            "default": "./geotoolkit.http.js"
+        },
+        "./geotoolkit.intgeo.js": {
+            "default": "./geotoolkit.intgeo.js"
+        },
+        "./geotoolkit.ivaapbackend.js": {
+            "default": "./geotoolkit.ivaapbackend.js"
+        },
+        "./geotoolkit.las.js": {
+            "default": "./geotoolkit.las.js"
+        },
+        "./geotoolkit.map.js": {
+            "default": "./geotoolkit.map.js"
+        },
+        "./geotoolkit.pdf.js": {
+            "default": "./geotoolkit.pdf.js"
+        },
+        "./geotoolkit.report.js": {
+            "default": "./geotoolkit.report.js"
+        },
+        "./geotoolkit.schematics.js": {
+            "default": "./geotoolkit.schematics.js"
+        },
+        "./geotoolkit.seislog.js": {
+            "default": "./geotoolkit.seislog.js"
+        },
+        "./geotoolkit.seismic.js": {
+            "default": "./geotoolkit.seismic.js"
+        },
+        "./geotoolkit.svg.js": {
+            "default": "./geotoolkit.svg.js"
+        },
+        "./geotoolkit.tiledshape.js": {
+            "default": "./geotoolkit.tiledshape.js"
+        },
+        "./geotoolkit.welllog.js": {
+            "default": "./geotoolkit.welllog.js"
+        },
+        "./geotoolkit.welllog.las.js": {
+            "default": "./geotoolkit.welllog.las.js"
+        },
+        "./geotoolkit.welllog.multiwell.js": {
+            "default": "./geotoolkit.welllog.multiwell.js"
+        },
+        "./geotoolkit.welllog.widgets.js": {
+            "default": "./geotoolkit.welllog.widgets.js"
+        },
+        "./geotoolkit.widgets.js": {
+            "default": "./geotoolkit.widgets.js"
+        },
+        "./geotoolkit3d.js": {
+            "default": "./geotoolkit3d.js"
+        }
+    },
+    "dependencies": {
+        "@int/impl": "file:",
+        "@shopify/react-native-skia": "0.1.212",
+        "react-native": "0.71.7",
+        "react-native-reanimated": "3.5.4",
+        "three": "0.152.0"
+    },
+    "optionalDependencies": {
+        "@xmldom/xmldom": "^0.8.1",
+        "canvas": "^2.11.0",
+        "jsdom": "^19.0.0"
+    },
+    "version": "4.0.76"
+}

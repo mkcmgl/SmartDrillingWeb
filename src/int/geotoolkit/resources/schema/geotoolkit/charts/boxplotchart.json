@@ -1,0 +1,137 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.charts.BoxPlotChart",
+  "description": "Schema describing Carnac BoxPlot Chart",
+  "title": "BoxPlot Chart Schema",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/geotoolkit.charts.AbstractChart"
+    },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {
+              "#ref": "/ClassName"
+            },
+            {
+              "default": "geotoolkit.charts.BoxPlotChart",
+              "id": "/geotoolkit.charts.BoxPlotChart/properties/ClassName"
+            }
+          ]
+        },
+        "series": {
+          "type": "object",
+          "id": "/geotoolkit.charts.BoxPlotChart/properties/series",
+          "properties": {
+            "x": {
+              "id": "/geotoolkit.charts.BoxPlotChart/properties/series/properties/x",
+              "type": "object",
+              "properties": {
+                "data": {
+                  "title": "X series",
+                  "type": "string"
+                },
+                "name": {
+                  "title": "Name",
+                  "type": "string"
+                }
+              }
+            },
+            "y": {
+              "id": "/geotoolkit.charts.BoxPlotChart/properties/series/properties/y",
+              "title": "Y series",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "id": "/geotoolkit.charts.BoxPlotChart/properties/series/properties/y/properties/data",
+                    "type": "string"
+                  },
+                  "linestyle": {
+                    "id": "/geotoolkit.charts.BoxPlotChart/properties/series/properties/y/properties/linestyle",
+                    "$ref": "/geotoolkit.attributes.LineStyle"
+                  },
+                  "fillstyle": {
+                    "id": "/geotoolkit.charts.BoxPlotChart/properties/series/properties/y/properties/fillstyle",
+                    "$ref": "/geotoolkit.attributes.FillStyle"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "boxwidth": {
+          "id": "/geotoolkit.charts.BoxPlotChart/properties/boxwidth",
+          "type": "number"
+        },
+        "boxpad": {
+          "id": "/geotoolkit.charts.BoxPlotChart/properties/boxpad",
+          "type": "number"
+        },
+        "whiskerswidth": {
+          "id": "/geotoolkit.charts.BoxPlotChart/properties/whiskerswidth",
+          "type": "number"
+        },
+        "boxwidthunit": {
+          "id": "/geotoolkit.charts.BoxPlotChart/properties/boxwidthunit",
+          "type": "string"
+        },
+        "fixedboxwidth": {
+          "id": "/geotoolkit.charts.BoxPlotChart/properties/fixedboxwidth",
+          "type": "number"
+        },
+        "connectedlinestyle": {
+          "id": "/geotoolkit.charts.BoxPlotChart/properties/connectedlinestyle",
+          "$ref": "/geotoolkit.attributes.LineStyle"
+        },
+        "isoutliersvisible": {
+          "id": "/geotoolkit.charts.BoxPlotChart/properties/isoutliersvisible",
+          "type": "boolean"
+        },
+        "boxvalues": {
+          "id": "/geotoolkit.charts.BoxPlotChart/properties/boxvalues",
+          "type": "object",
+          "properties": {
+            "visible": {
+              "id": "/geotoolkit.charts.BoxPlotChart/properties/boxvalues/properties/visible",
+              "type": "boolean"
+            },
+            "suppress": {
+              "id": "/geotoolkit.charts.BoxPlotChart/properties/boxvalues/properties/suppress",
+              "type": "boolean"
+            },
+            "verticaloffset": {
+              "id": "/geotoolkit.charts.BoxPlotChart/properties/boxvalues/properties/verticaloffset",
+              "type": "number"
+            },
+            "horizontaloffset": {
+              "id": "/geotoolkit.charts.BoxPlotChart/properties/boxvalues/properties/horizontaloffset",
+              "type": "number"
+            },
+            "decimalprecision": {
+              "id": "/geotoolkit.charts.BoxPlotChart/properties/boxvalues/properties/decimalprecision",
+              "type": "number"
+            },
+            "textstyle": {
+              "id": "/geotoolkit.charts.BoxPlotChart/properties/boxvalues/properties/textstyle",
+              "$ref": "/geotoolkit.attributes.TextStyle"
+            },
+            "location": {
+              "id": "/geotoolkit.charts.BoxPlotChart/properties/boxvalues/properties/location",
+              "type": "string",
+              "enum": [
+                "Top",
+                "Below",
+                "Left",
+                "Right"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

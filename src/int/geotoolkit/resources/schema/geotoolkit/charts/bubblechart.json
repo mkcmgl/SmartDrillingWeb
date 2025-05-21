@@ -1,0 +1,101 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.charts.BubbleChart",
+  "description": "Schema describing Carnac Bubble Chart",
+  "title": "Bubble Chart Schema",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/geotoolkit.charts.AbstractChart"
+    },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {
+              "#ref": "/ClassName"
+            },
+            {
+              "default": "geotoolkit.charts.BubbleChart",
+              "id": "/geotoolkit.charts.BubbleChart/properties/ClassName"
+            }
+          ]
+        },
+        "series": {
+          "type": "object",
+          "id": "/geotoolkit.charts.BubbleChart/properties/series",
+          "properties": {
+            "x": {
+              "id": "/geotoolkit.charts.BubbleChart/properties/series/properties/x",
+              "type": "object",
+              "properties": {
+                "data": {
+                  "title": "X series",
+                  "type": "string"
+                },
+                "name": {
+                  "title": "Name",
+                  "type": "string"
+                }
+              }
+            },
+            "y": {
+              "id": "/geotoolkit.charts.BubbleChart/properties/series/properties/y",
+              "type": "object",
+              "properties": {
+                "data": {
+                  "title": "Y series",
+                  "type": "string"
+                },
+                "name": {
+                  "title": "Name",
+                  "type": "string"
+                }
+              }
+            },
+            "z": {
+              "id": "/geotoolkit.charts.BubbleChart/properties/series/properties/z",
+              "type": "object",
+              "properties": {
+                "data": {
+                  "title": "Z series",
+                  "type": "string"
+                }
+              }
+            },
+            "s": {
+              "id": "/geotoolkit.charts.BubbleChart/properties/series/properties/s",
+              "type": "object",
+              "properties": {
+                "data": {
+                  "title": "S series",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "linestyle": {
+          "id": "/geotoolkit.charts.BubbleChart/properties/linestyle",
+          "$ref": "/geotoolkit.attributes.LineStyle"
+        },
+        "fillstyle": {
+          "id": "/geotoolkit.charts.BubbleChart/properties/fillstyle",
+          "$ref": "/geotoolkit.attributes.FillStyle"
+        },
+        "minsize": {
+          "id": "/geotoolkit.charts.BubbleChart/properties/minsize",
+          "type": "integer"
+        },
+        "maxsize": {
+          "id": "/geotoolkit.charts.BubbleChart/properties/maxsize",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "minsize",
+        "maxsize"
+      ]
+    }
+  ]
+}

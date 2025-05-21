@@ -1,0 +1,25 @@
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="17.5px" height="17px">
+<path fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+ d="M2.500,0.500 L14.500,0.500 C15.605,0.500 16.500,1.395 16.500,2.500 L16.500,11.500 C16.500,12.605 15.605,13.500 14.500,13.500 L2.500,13.500 C1.395,13.500 0.500,12.605 0.500,11.500 L0.500,2.500 C0.500,1.395 1.395,0.500 2.500,0.500 Z"/>
+<path fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+ d="M6.000,3.500 C7.933,3.500 9.500,5.067 9.500,7.000 C9.500,8.933 7.933,10.500 6.000,10.500 C4.067,10.500 2.500,8.933 2.500,7.000 C2.500,5.067 4.067,3.500 6.000,3.500 Z"/>
+<path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+ d="M5.500,3.500 L6.500,3.500 L6.500,7.500 L5.500,7.500 L5.500,3.500 Z"/>
+<path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+ d="M5.500,6.500 L9.500,6.500 L9.500,7.500 L5.500,7.500 L5.500,6.500 Z"/>
+<path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+ d="M11.500,3.500 L14.500,3.500 L14.500,4.500 L11.500,4.500 L11.500,3.500 Z"/>
+<path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+ d="M11.500,6.500 L14.500,6.500 L14.500,7.500 L11.500,7.500 L11.500,6.500 Z"/>
+<path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+ d="M11.500,8.500 L14.500,8.500 L14.500,9.500 L11.500,9.500 L11.500,8.500 Z"/>
+<path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+ d="M7.500,13.500 L9.500,13.500 L9.500,16.500 L7.500,16.500 L7.500,13.500 Z"/>
+<path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+ d="M11.500,13.500 L12.500,13.500 L13.500,16.500 L12.500,16.500 L11.500,13.500 Z"/>
+<path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+ d="M4.500,13.500 L5.500,13.500 L4.500,16.500 L3.500,16.500 L4.500,13.500 Z"/>
+</svg>

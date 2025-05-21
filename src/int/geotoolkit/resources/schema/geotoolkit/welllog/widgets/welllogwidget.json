@@ -1,0 +1,112 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.welllog.widgets.WellLogWidget",
+    "description": "Schema describing WellLog WellLogWidget",
+    "title": "WellLogWidget Schema",
+    "type": "object",
+    "allOf": [
+      { "$ref": "/geotoolkit.widgets.BaseWidget" },
+      {
+        "properties": {
+          "ClassName": {
+            "default": "geotoolkit.welllog.widgets.WellLogWidget",
+            "description": "An explanation about the purpose of this instance.",
+            "enum": ["geotoolkit.welllog.widgets.WellLogWidget"],
+            "id": "/geotoolkit.welllog.widgets.WellLogWidget/properties/ClassName",
+            "title": "Class Name",
+            "type": "string"
+          },
+          "range": { "$ref": "/geotoolkit.util.Range" },
+          "horizontalscrollable": {
+            "default": false,
+            "id": "/geotoolkit.welllog.widgets.WellLogWidget/properties/horizontalscrollable",
+            "title": "Horizontal Scrollable",
+            "description": "Defines if plot displays horizontal scrollbars",
+            "type": "boolean"
+          },
+          "verticalscrollable": {
+            "default": false,
+            "id": "/geotoolkit.welllog.widgets.WellLogWidget/properties/verticalscrollable",
+            "title": "Vertical Scrollable",
+            "description": "Defines if plot displays vertical scrollbars",
+            "type": "boolean"
+          },
+          "indextype": {
+            "id": "/geotoolkit.welllog.widgets.WellLogWidget/properties/indextype",
+            "title": "Index Type",
+            "description": "Primary index types",
+            "enum": ["time", "depth"]
+          },
+          "indexunit": {
+            "id": "/geotoolkit.welllog.widgets.WellLogWidget/properties/indexunit",
+            "title": "Index Unit",
+            "description": "Primary index unit",
+            "type": "string"
+          },
+          "deviceunit": {
+            "id": "/geotoolkit.welllog.widgets.WellLogWidget/properties/deviceunit",
+            "title": "Device Unit",
+            "description": "Primary device unit",
+            "type": "string"
+          },
+          "timezone": {
+            "id": "/geotoolkit.welllog.widgets.WellLogWidget/properties/timezone",
+            "title": "Timezone",
+            "description": "Time zone for time axis",
+            "enum": ["UTC", "LocalTime"]
+          },
+          "timezoneoffset": {
+            "id": "/geotoolkit.welllog.widgets.WellLogWidget/properties/timezoneoffset",
+            "title": "Timezone offset",
+            "description": "Time zone offset for date time axis",
+            "type": "number"
+          },
+          "gridlinestyle": {
+            "description": "Grid LineStyle",
+            "id": "/geotoolkit.welllog.widgets.WellLogWidget/properties/gridlinestyle",
+            "title": "Grid LineStyle",
+            "oneOf": [
+              { "$ref": "/geotoolkit.attributes.LineStyle" },
+              { "type": "null" }
+            ]
+          },
+          "viewcache": {
+            "default": true,
+            "id": "/geotoolkit.welllog.widgets.WellLogWidget/properties/viewcache",
+            "title": "View Cache",
+            "description": "Whether ViewCache should applied to this widget",
+            "type": "boolean"
+          },
+          "scroll": {
+            "id": "/geotoolkit.welllog.widgets.WellLogWidget/properties/scroll",
+            "description": "Scroll option",
+            "title": "Scroll Option",
+            "type": "object",
+            "properties": {
+              "direction": {
+                "default": "Depth",
+                "description": "Scroll direction when using scroll wheel to scroll",
+                "enum": ["Depth", "TrackWidth"],
+                "id": "/geotoolkit.welllog.widgets.WellLogWidget/properties/scroll/properties/direction",
+                "title": "Scroll Direction"
+              }
+            }
+          },
+          "orientation": {
+            "default": "vertical",
+            "description": "Set orientation of the well log widget",
+            "enum": ["vertical", "horizontal"],
+            "id": "/geotoolkit.welllog.widgets.WellLogWidget/properties/orientation",
+            "title": "Orientation"
+          },
+          "direction": {
+            "default": "Straight",
+            "description": "Set track render direction",
+            "enum": ["Straight", "Reverse"],
+            "id": "/geotoolkit.welllog.widgets.WellLogWidget/properties/direction",
+            "title": "Direction"
+          }
+        }
+      }
+    ]
+  }

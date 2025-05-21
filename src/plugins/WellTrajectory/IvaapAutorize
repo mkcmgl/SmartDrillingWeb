@@ -1,0 +1,26 @@
+import {HttpClient} from '@int/geotoolkit/http/HttpClient';
+
+const httpClient = HttpClient.getInstance().getHttp();
+let headers = {
+    'Accept': '',
+    'Authorization': ''
+};
+
+function authorize () {
+    return httpClient.post('https://pub.ivaap.int.com/IVAAPServer/api/v2/login', null, {
+        'responsetype': 'json',
+        'timeout': 2000,
+        'headers': {
+            'authorization': 'Basic c2RrdXNlcjp5dDNwNEtzVTlxR3Y='
+        },
+        'transformresponse': (response) => {
+            headers = {
+                'Accept': 'application/json, text/javascript',
+                'Authorization': 'Bearer ' + response.data.token
+            };
+            return response;
+        }
+    });
+}
+
+export {authorize, headers};

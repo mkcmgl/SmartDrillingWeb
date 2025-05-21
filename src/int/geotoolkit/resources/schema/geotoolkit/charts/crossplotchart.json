@@ -1,0 +1,103 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.charts.CrossPlotChart",
+  "description": "Schema describing Carnac CrossPlot Chart",
+  "title": "CrossPlot Chart Schema",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "/geotoolkit.charts.AbstractChart"
+    },
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {
+              "#ref": "/ClassName"
+            },
+            {
+              "default": "geotoolkit.charts.CrossPlotChart",
+              "id": "/geotoolkit.charts.CrossPlotChart/properties/ClassName"
+            }
+          ]
+        },
+        "symbolsize": {
+          "type": "number",
+          "id": "/geotoolkit.charts.CrossPlotChart/properties/symbolsize"
+        },
+        "histogram": {
+          "type": "object",
+          "id": "/geotoolkit.charts.CrossPlotChart/properties/histogram",
+          "properties": {
+            "x": {
+              "id": "/geotoolkit.charts.CrossPlotChart/properties/histogram/properties/x",
+              "type": "object",
+              "properties": {
+                "visible": {
+                  "id": "/geotoolkit.charts.CrossPlotChart/properties/histogram/properties/x/properties/visible",
+                  "type": "boolean"
+                },
+                "bins": {
+                  "id": "/geotoolkit.charts.CrossPlotChart/properties/histogram/properties/x/properties/bins",
+                  "type": "integer"
+                },
+                "linestyle": {
+                  "id": "/geotoolkit.charts.CrossPlotChart/properties/histogram/properties/x/properties/linestyle",
+                  "$ref": "/geotoolkit.attributes.LineStyle"
+                },
+                "fillstyle": {
+                  "id": "/geotoolkit.charts.CrossPlotChart/properties/histogram/properties/x/properties/fillstyle",
+                  "$ref": "/geotoolkit.attributes.FillStyle"
+                }
+              }
+            },
+            "y": {
+              "id": "/geotoolkit.charts.CrossPlotChart/properties/histogram/properties/y",
+              "type": "object",
+              "properties": {
+                "visible": {
+                  "id": "/geotoolkit.charts.CrossPlotChart/properties/histogram/properties/y/properties/visible",
+                  "type": "boolean"
+                },
+                "bins": {
+                  "id": "/geotoolkit.charts.CrossPlotChart/properties/histogram/properties/y/properties/bins",
+                  "type": "integer"
+                },
+                "linestyle": {
+                  "id": "/geotoolkit.charts.CrossPlotChart/properties/histogram/properties/y/properties/linestyle",
+                  "$ref": "/geotoolkit.attributes.LineStyle"
+                },
+                "fillstyle": {
+                  "id": "/geotoolkit.charts.CrossPlotChart/properties/histogram/properties/y/properties/fillstyle",
+                  "$ref": "/geotoolkit.attributes.FillStyle"
+                }
+              }
+            },
+            "z": {
+              "id": "/geotoolkit.charts.CrossPlotChart/properties/histogram/properties/z",
+              "type": "object",
+              "properties": {
+                "visible": {
+                  "id": "/geotoolkit.charts.CrossPlotChart/properties/histogram/properties/z/properties/visible",
+                  "type": "boolean"
+                },
+                "bins": {
+                  "id": "/geotoolkit.charts.CrossPlotChart/properties/histogram/properties/z/properties/bins",
+                  "type": "integer"
+                },
+                "linestyle": {
+                  "id": "/geotoolkit.charts.CrossPlotChart/properties/histogram/properties/z/properties/linestyle",
+                  "$ref": "/geotoolkit.attributes.LineStyle"
+                },
+                "fillstyle": {
+                  "id": "/geotoolkit.charts.CrossPlotChart/properties/histogram/properties/z/properties/fillstyle",
+                  "$ref": "/geotoolkit.attributes.FillStyle"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

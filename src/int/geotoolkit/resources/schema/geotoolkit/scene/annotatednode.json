@@ -1,0 +1,24 @@
+{
+    "additionalProperties": true,
+    "id": "/geotoolkit.scene.AnnotatedNode",
+    "description": "Schema describing Carnac AnnotatedNode",
+    "title": "AnnotatedNode Schema",
+    "type": "object",
+    "allOf": [
+      { "$ref": "/geotoolkit.scene.Group"},
+      {
+        "properties": {
+          "ClassName": {
+            "allOf": [
+              {"#ref": "/ClassName"},
+              {
+                "default": "geotoolkit.scene.AnnotatedNode",
+                "id": "/geotoolkit.scene.AnnotatedNode/properties/ClassName"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+  

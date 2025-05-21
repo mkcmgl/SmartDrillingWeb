@@ -1,0 +1,68 @@
+{
+    "additionalProperties": true,
+    "description": "Schema describing the chart Axis",
+    "title": "Axis",
+    "id": "/geotoolkit.charts.Axis",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.axis.Axis" },
+        {
+            "properties": {
+                "ClassName": {
+                    "allOf": [
+                        {"#ref": "/ClassName"},
+                        {
+                            "default": "geotoolkit.charts.Axis",
+                            "id": "/geotoolkit.charts.Axis/properties/ClassName"
+                        }
+                    ]
+                },
+                "min": {
+                    "default": 0,
+                    "description": "The minimum axis limit value",
+                    "id": "/geotoolkit.charts.Axis/properties/min",
+                    "title": "Minimum",
+                    "oneOf": [
+                        {"type": "null"},
+                        {"type": "number"}
+                      ]
+                },
+                "max": {
+                    "default": 100,
+                    "description": "The maximum axis limit value",
+                    "id": "/geotoolkit.charts.Axis/properties/max",
+                    "title": "Maximum",
+                    "oneOf": [
+                        {"type": "null"},
+                        {"type": "number"}
+                      ]
+                },
+                "calculated": {
+                    "description": "Placeholder for calculated properties",
+                    "id": "/geotoolkit.charts.Axis/properties/calculated",
+                    "type": "object"
+                },
+                "dimension": {
+                    "id": "/geotoolkit.charts.Axis/properties/dimension",
+                    "type": "object",
+                    "properties": {
+                        "neatlimits": {
+                            "id":"/geotoolkit.charts.Axis/properties/dimension/properties/neatlimits",
+                            "type": "boolean"
+                        }
+                    }
+                },
+                "grid": {
+                    "id": "/geotoolkit.charts.Axis/properties/grid",
+                    "type": "object",
+                    "properties": {
+                        "visible": {
+                            "id": "/geotoolkit.charts.Axis/properties/grid/properties/visible",
+                            "type":"boolean"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.charts.HistogramChart",
+  "description": "Schema describing Carnac Histogram Chart",
+  "title": "Histogram Chart Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.charts.AbstractChart"},
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.charts.HistogramChart",
+              "id": "/geotoolkit.charts.HistogramChart/properties/ClassName"
+            }
+          ]
+        },
+        "series":{
+          "type": "object",
+          "id": "/geotoolkit.charts.HistogramChart/properties/series",
+          "properties": {
+              "x": {
+                  "id": "/geotoolkit.charts.HistogramChart/properties/series/properties/x",
+                  "title": "X series",
+                  "type": "string"
+              }
+            }
+          },
+          "bins": {
+            "id": "/geotoolkit.charts.HistogramChart/properties/bins",
+            "type": "number"
+          },
+          "frequencytype": {
+            "id": "/geotoolkit.charts.HistogramChart/properties/frequencytype",
+            "type": "string"
+          },
+          "accumulation": {
+            "id": "/geotoolkit.charts.HistogramChart/properties/accumulation",
+            "type": "boolean"
+          }
+        }
+      }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "additionalProperties": true,
+  "title": "Anchor Type",
+  "description": "An enum defining all types of anchors supported by carnac",
+  "id": "/geotoolkit.util.AnchorType",
+  "type": "string",
+  "enum": ["None",
+    "LeftTop",
+    "LeftBottom",
+    "RightTop",
+    "RightBottom",
+    "Center",
+    "LeftCenter",
+    "BottomCenter",
+    "RightCenter",
+    "TopCenter"]
+}

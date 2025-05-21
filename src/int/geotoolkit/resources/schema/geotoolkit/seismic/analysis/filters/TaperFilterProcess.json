@@ -1,0 +1,52 @@
+{
+    "additionalProperties": true,
+    "description": "Schema describing geotoolkit Taper Filter Processor",
+    "id": "/geotoolkit.seismic.analysis.filters.TaperFilterProcess",
+    "title": "TaperFilter Processor Root Schema",
+    "type": "object",
+    "allOf": [
+        { "$ref": "/geotoolkit.seismic.pipeline.processor.SeismicTraceProcessor" },
+        {
+            "ClassName": {
+                "allOf": [{"#ref": "/ClassName"}, {
+                    "default": "geotoolkit.seismic.analysis.filters.TaperFilterProcess",
+                    "id": "/geotoolkit.seismic.analysis.filters.TaperFilterProcess/properties/ClassName"
+                }]
+            },
+            "properties": {
+                "samplerate": {
+                    "id": "/geotoolkit.seismic.analysis.filters.TaperFilterProcess/properties/samplerate",
+                    "type": "number"
+                },
+                "passflag": {
+                    "id": "/geotoolkit.seismic.analysis.filters.TaperFilterProcess/properties/passflag",
+                    "type": "boolean"
+                },
+                "f1": {
+                    "id": "/geotoolkit.seismic.analysis.filters.TaperFilterProcess/properties/f1",
+                    "type": "number"
+                },
+                "f2": {
+                    "id": "/geotoolkit.seismic.analysis.filters.TaperFilterProcess/properties/f2",
+                    "type": "number"
+                },
+                "f3": {
+                    "id": "/geotoolkit.seismic.analysis.filters.TaperFilterProcess/properties/f3",
+                    "type": "number"
+                },
+                "f4": {
+                    "id": "/geotoolkit.seismic.analysis.filters.TaperFilterProcess/properties/f4",
+                    "type": "number"
+                }
+            },
+            "required": [
+                "samplerate",
+                "passflag",
+                "f1",
+                "f2",
+                "f3",
+                "f4"
+            ]
+        }
+    ]
+}

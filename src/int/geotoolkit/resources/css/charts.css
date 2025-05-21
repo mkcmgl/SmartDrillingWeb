@@ -1,0 +1,185 @@
+
+.cg-tooltip-holder {
+  position: relative;
+}
+/* Default setting for tooltip */
+.cg-tooltip-container {
+  position: absolute;
+  display: block;
+  overflow: visible !important;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  padding: 2px 12px 3px 7px;
+  background: #f7f7f7;
+  color: #333333;
+  border: 1px solid #938e8e;
+  opacity: 0.8;
+  text-align: left;
+  box-shadow: 3px 3px 10px #888;
+  margin: 0 !important;
+  z-index: 10000;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .cg-tooltip-container {
+    border-radius: 0;
+  }
+}
+/* Default left arrow for tooltip */
+.cg-tooltip-arrow-left::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0px;
+  left: 0;
+  top: 50%;
+  border: 5px solid transparent;
+  border-left: 0;
+  border-right: 5px solid  #938e8e;
+  transform: translate(calc(-100%), -50%);
+}
+.cg-tooltip-arrow-left::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0px;
+  left: 0;
+  top: 50%;
+  border: 4px solid transparent;
+  border-left: 0;
+  border-right: 4px solid #f7f7f7;
+  transform: translate(calc(-100%), -50%);
+}
+/* Default top arrow for tooltip */
+.cg-tooltip-arrow-top::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0px;
+  left: 50%;
+  top: 0;
+  border: 5px solid transparent;
+  border-top: 0;
+  border-bottom: 5px solid #938e8e;
+  transform: translate(-50%, -100%);
+}
+.cg-tooltip-arrow-top::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0px;
+  left: 50%;
+  top: 0;
+  border: 4px solid transparent;
+  border-top: 0;
+  border-bottom: 4px solid #f7f7f7;
+  transform: translate(-50%, -100%);
+}
+/* Default right arrow for tooltip */
+.cg-tooltip-arrow-right::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0px;
+  right: 0;
+  top: 50%;
+  border: 5px solid transparent;
+  border-right: 0;
+  border-left: 5px solid #938e8e;
+  transform: translate(100%, -50%);
+}
+.cg-tooltip-arrow-right::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0px;
+  right: 0;
+  top: 50%;
+  border: 4px solid transparent;
+  border-right: 0;
+  border-left: 4px solid #f7f7f7;
+  transform: translate(100%, -50%);
+}
+/* Default bottom arrow for tooltip */
+.cg-tooltip-arrow-bottom::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0px;
+  left: 50%;
+  bottom: 0px;
+  border: 5px solid transparent;
+  border-bottom: 0;
+  border-top: 5px solid #938e8e;
+  transform: translate(-50%, 100%);
+  z-index: 10000;
+}
+.cg-tooltip-arrow-bottom::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0px;
+  left: 50%;
+  bottom: 0;
+  border: 4px solid transparent;
+  border-bottom: 0;
+  border-top: 4px solid #f7f7f7;
+  transform: translate(-50%, 100%);
+  z-index: 10000;
+}
+/* Tooltip item name */
+/* .cg-tooltip-item-name */
+/* Tooltip item value */
+/* .cg-tooltip-item-value */
+/* Tooltip item value */
+/* .cg-tooltip-item-unit */
+
+
+.cg-tooltip-row {
+  display: table-row;
+}
+
+/* Tooltip symbol */
+.cg-tooltip-symbol-cell {
+  display: table-cell;
+  text-align: center;
+}
+.cg-tooltip-symbol {
+  margin-right: 5px;
+  vertical-align: middle;
+  background-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+}
+/* Tooltip symbol circle */
+.cg-tooltip-symbol.circle {
+  margin-right: 5px;
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  border-radius: 5px;
+}
+/* Tooltip symbol line */
+.cg-tooltip-symbol.line {
+    margin-right: 5px;
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    transform: scale(1.2, 0.2);
+}
+/* Tooltip symbol diamond */
+.cg-tooltip-symbol.diamond {
+    margin-right: 5px;
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    transform: rotate(45deg);
+    border-radius: 0px;
+}
+/* Tooltip symbol square */
+.cg-tooltip-symbol.square {
+    margin-right: 5px;
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    border-radius: 0px;
+}

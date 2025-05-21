@@ -1,0 +1,23 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.charts.AbstractChart",
+  "description": "Schema describing Carnac Abstract Chart",
+  "title": "Abstract Chart Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.scene.Group"},
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.charts.AbstractChart",
+              "id": "/geotoolkit.charts.AbstractChart/properties/ClassName"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

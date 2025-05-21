@@ -1,0 +1,33 @@
+{
+  "additionalProperties": true,
+  "id": "/geotoolkit.widgets.ChartWidget",
+  "description": "Schema describing Carnac Chart Widget",
+  "title": "Chart Widget Schema",
+  "type": "object",
+  "allOf": [
+    { "$ref": "/geotoolkit.widgets.AnnotatedWidget"},
+    {
+      "properties": {
+        "ClassName": {
+          "allOf": [
+            {"#ref": "/ClassName"},
+            {
+              "default": "geotoolkit.widgets.ChartWidget",
+              "id": "/geotoolkit.widgets.ChartWidget/properties/ClassName"
+            }
+          ]
+        },
+        "legend": {
+          "id": "/geotoolkit.widgets.ChartWidget/properties/legend",
+          "type": "object",
+          "properties": {
+            "visible": {
+              "id": "/geotoolkit.widgets.ChartWidget/properties/legend/properties/visible",
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
