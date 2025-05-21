@@ -1,6 +1,6 @@
 ﻿import SparkMD5 from "spark-md5";
 import $ from "jquery";
-import { Session } from '/@/utils/storage';
+import { Storage } from '/@/utils/storage';
 // import {getDesEncrypt} from '/@/des/crypt/descrypt';
 import { checkErrCode } from '/@/plugins/axios/error.ts';
 //Evget_Tom 2022-5-13 21:00
