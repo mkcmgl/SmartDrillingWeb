@@ -221,7 +221,13 @@
                 </div>
                 <div class="list-item-name">{{ item.wellName }}</div>
               </div>
-              <div :class="item.isCancelSelected ? 'list-item-btn-selected' : 'list-item-btn'">
+              <div
+                :class="
+                  item.isCancelSelected
+                    ? 'list-item-btn-selected'
+                    : 'list-item-btn'
+                "
+              >
                 <el-checkbox v-model="item.isCancelSelected" />
               </div>
             </div>
@@ -326,7 +332,7 @@ import TopBar from "@/views/TopBar.vue";
 import RenameDialog from "/src/views/components/RenameDialog.vue";
 import ShareDialog from "/src/views/components/ShareDialog.vue";
 import ConfirmDialog from "/src/views/components/ConfirmDialog.vue";
-
+import resData from "./data.json";
 import {
   getAllWellList,
   getProjectWellList,
@@ -656,7 +662,9 @@ const getWellListData = async (isUpdateMap) => {
       searchValueObj.label === "All" ||
       searchValueObj.label === "curveName"
     ) {
-      response = await getAllWellList(params);
+      console.log("All");
+      // response resData = await getAllWellList(params);
+      response = resData;
       let wellIds = [];
       if (state.projectId) {
         const selectRes = await getProjectWellList(projectParams);
@@ -687,6 +695,7 @@ const getWellListData = async (isUpdateMap) => {
         state.allSelectWellList = state.selectWellList;
       }
     } else {
+      console.log("no-All");
       // 前端过滤数据
       response = await getAllWellList(); // 还是需要重新查一下数据:因为
       state.allTableData = response.data;
@@ -1194,12 +1203,12 @@ onMounted(async () => {
 <style lang="scss" scoped>
 .map {
   display: flex;
-  height: calc(100vh - 50px);
   width: 100%;
+  height: calc(100vh - 50px);
 }
 #map_container {
-  height: calc(100vh - 50px);
   width: 100%;
+  height: calc(100vh - 50px);
   // background-image: url("@/assets/Map/mapBackground.jpg");
   // background-size: cover;
   // background-position: center;
@@ -1217,7 +1226,7 @@ onMounted(async () => {
 }
 
 .well-all::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, .2);
   border-radius: 3px;
 }
 
@@ -1225,27 +1234,27 @@ onMounted(async () => {
   background-color: transparent;
 }
 .info-list {
-  width: 260px;
-  background-color: #313131;
   position: absolute;
-  left: 0;
   top: 0;
-  height: 100%;
+  left: 0;
   z-index: 2;
+  width: 260px;
+  height: 100%;
+  background-color: #313131;
 }
 .is-fold-list {
   display: none;
 }
 .map-left,
 .map-right {
-  background-color: #212121;
-  font-size: 20px;
-  height: 46px;
-  padding: 0 10px;
-  font-weight: bold;
-  color: #eee;
   display: flex;
   justify-content: space-between;
+  height: 46px;
+  padding: 0 10px;
+  color: #eee;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #212121;
   //   border-top: 1px solid #eee;
 }
 .map-left-title,
@@ -1258,10 +1267,10 @@ onMounted(async () => {
   margin: 10px 0;
 }
 .map-left-btn-item {
-  padding: 0px 5px;
+  padding: 0 5px;
 }
 .map-left-btn-item:hover {
-  padding: 0px 5px;
+  padding: 0 5px;
   background-color: #525252;
   border-radius: 5px;
 }
@@ -1274,14 +1283,14 @@ onMounted(async () => {
   cursor: pointer;
 }
 .map-content {
-  width: 100%;
   position: relative;
   display: flex;
+  width: 100%;
 }
 
 .work-info-content {
-  flex: 1;
   display: flex;
+  flex: 1;
 }
 
 .map-header {
@@ -1291,25 +1300,25 @@ onMounted(async () => {
 }
 
 .search-box {
+  position: relative;
   width: 380px;
   margin: 10px auto;
-  position: relative;
 }
 .search-box-list {
   position: absolute;
+  left: 0;
   display: flex;
   flex-wrap: wrap;
-  left: 0;
   width: 380px;
 }
 .search-list {
-  color: #b2b2b2;
-  padding: 6px;
-  text-align: center;
-  border-radius: 5px;
-  margin: 5px 15px 5px 0;
-  background-color: #414141;
   display: flex;
+  padding: 6px;
+  margin: 5px 15px 5px 0;
+  color: #b2b2b2;
+  text-align: center;
+  background-color: #414141;
+  border-radius: 5px;
 }
 .search-list-value {
   color: #fff;
@@ -1326,9 +1335,9 @@ onMounted(async () => {
 .map-content-icon {
   width: 16px;
   height: 16px;
-  border-radius: 2px;
-  margin: 10px;
   padding: 4px;
+  margin: 10px;
+  border-radius: 2px;
 }
 .is-fold-count {
   background-color: #212121;
@@ -1347,15 +1356,15 @@ onMounted(async () => {
 
 .well-all-list,
 .select-well-list {
-  width: 100%;
-  cursor: pointer;
-  color: #eee;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  padding: 0 10px;
+  width: 100%;
   height: 26px;
+  padding: 0 10px;
+  color: #eee;
   line-height: 26px;
+  cursor: pointer;
 }
 
 .list-item-btn {
@@ -1398,63 +1407,63 @@ onMounted(async () => {
   }
 }
 .more-item:hover {
-  cursor: pointer;
-  color: #67c23a;
   overflow: hidden;
+  color: #67c23a;
+  cursor: pointer;
 }
 .more-item:hover img {
-  filter: drop-shadow(#67c23a 100px 0);
   transform: translateX(-100px);
+  filter: drop-shadow(#67c23a 100px 0);
 }
 
 .is-fold-icon {
   position: absolute;
-  right: 0;
   top: 0;
+  right: 0;
   z-index: 2;
 }
 .unfold-icon {
   position: absolute;
-  right: 260px;
   top: 0;
+  right: 260px;
   z-index: 2;
 }
 .map-count {
   position: absolute;
-  background-color: #f08a5d;
-  font-size: 12px;
   padding: 0 5px;
-  border-radius: 30px;
   color: #eee;
+  font-size: 12px;
+  background-color: #f08a5d;
+  border-radius: 30px;
 }
 .map-count-left {
-  left: 30px;
   top: 2px;
+  left: 30px;
 }
 .map-count-right {
-  right: 30px;
   top: 2px;
+  right: 30px;
 }
 .is-fold-well {
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   z-index: 2;
 }
 .unfold-well {
   position: absolute;
-  left: 260px;
   top: 0;
+  left: 260px;
   z-index: 2;
 }
 .project-info-list {
   position: absolute;
-  width: 260px;
-  background-color: #313131;
-  right: 0;
   top: 0;
-  height: 100%;
+  right: 0;
   z-index: 2;
+  width: 260px;
+  height: 100%;
+  background-color: #313131;
 }
 
 .empty-select-well {
@@ -1469,12 +1478,12 @@ onMounted(async () => {
 }
 
 .loading-indicator {
-  height: calc(100vh - 50px);
-  left: 260px;
-  right: 260px;
-  background-color: #212121;
   position: absolute;
+  right: 260px;
+  left: 260px;
   z-index: 1000;
+  height: calc(100vh - 50px);
+  background-color: #212121;
 }
 
 :deep(.well-all-list .el-checkbox.is-disabled.is-checked .el-checkbox__inner) {
